@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head :controller="mc-header">
+  <meta charset="UTF-8">
+  <title>免费教科书平台</title>
+  <link rel="stylesheet" type="text/css" href="./statics/dll/dll.css">
+  <link rel="stylesheet" type="text/css" href="./statics/index/base/styles.css">
+  <script type="text/javascript" src="./statics/dll/dll.js"></script>
+  <script type="text/javascript" src="./statics/commons/commons/bundle.js"></script>
+  <script type="text/javascript" src="./statics/index/base/entry.js"></script>
+  <style type="text/css">
+    .ms-controller{
+      display: none;
+    }
+  </style>
+</head>
+
+<body :controller="mc-router">
+  <div class="g-hd">
+    <div class="g-bd">
+        <div class="g-mn4">
+            <div class="g-mnc4">
+                <div class="g-mn5">
+                    <div class="g-mnc5">
+                        <p>湖北省免费教科书管理平台</p>
+                    </div>
+                </div>
+                <div class="g-sd5">
+                    <span class="u-btns f-fr">
+                        <button type="button" class="u-btn"><span class="btntxt" ms-text="@va_username"></span><span class="btnsel"></span></button>
+                        <ul class="u-menu u-menu-rt u-menu-gp ">
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">安全退出</a></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="g-sd4">
+          <p>LOGO</p>
+        </div>
+    </div>
+  </div>
+  <div class="g-sd">
+    <ul id="j-menu" class="m-menu">
+      <li>
+        <h4>角色管理</h4>
+        <div class="list-item f-dn">
+          <p><a href="#!/user/user_set">账户设置</a></p>
+          <p><a href="#!/user/user_list">用户列表</a></p>
+        </div>
+      </li>
+      <li>
+        <h4>科目管理</h4>
+        <div class="list-item f-dn">
+          <p><a href="#!/subject/subject_list">科目列表</a></p>
+        </div>
+      </li>
+      <li>
+        <h4>征订录入</h4>
+        <div class="list-item f-dn">
+          <p><a href="#!/data/data_entry">数据录入</a></p>
+          <p><a href="#!/data/data_view">查看录入</a></p>
+        </div>
+      </li>
+      <li>
+        <h4>报表管理</h4>
+        <div class="list-item f-dn">
+          <p><a href="#!/report/report_view">报表查看</a></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="g-mn" ms-class="va_pages_styles">
+    <div class="m-crumb">
+        <ul class="f-cb">
+            <li><a href="/">主页</a></li>
+            <li><i>&gt;</i>{{@va_modulename}}</li>
+            <li><i>&gt;</i>{{@va_pagename}}</li>
+        </ul>
+    </div>
+    <div class="g-main" ms-html="@va_main" id="mainContent"></div>
+  </div>
+  <!-- 尾部 -->
+<!--   <div class="g-ft">
+  333
+</div> -->
+</body>
+
+</html>

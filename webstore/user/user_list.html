@@ -1,0 +1,25 @@
+<div ms-important="mc_user_list">
+  <div class="m-form">
+    <form name="" action="#" method="get">
+      <fieldset>
+        <div class="formitm f-fl">
+          <button type="button" class="u-btn u-btn-c3" ms-click="f_addUser">创建用户</button>
+          <button type="button" class="u-btn ml10">查看已关闭用户</button>
+        </div>
+        <div class="formitm f-fl">
+          <label class="lab">用户名：</label>
+          <div class="ipt">
+            <input type="text" class="u-ipt" />
+            <button type="button" class="u-btn u-btn-c3" ms-click="f_search">查询</button>
+            <button type="button" class="u-btn u-btn-c4" ms-click="f_reset">重置</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div ms-html="@va_table_list">
+
+  </div>
+  <wbr ms-widget="[{is:'ms-pager'},@config]" />
+
+</div>

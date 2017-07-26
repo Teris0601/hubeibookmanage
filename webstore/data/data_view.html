@@ -1,0 +1,29 @@
+<div :important="mc_data_view">
+    <div class="m-form">
+        
+        <button type="button" class="u-btn u-btn-c1 ml10">批量删除</button>
+        <button type="button" class="u-btn u-btn-c2 ml10">提交至上级</button>
+    </div>
+    <table class="m-table">
+        <thead>
+            <tr>
+                <th class="cola">
+                    <input type="checkbox" name="" ms-duplex-checked="@checkall_status" data-duplex-changed="f_checkall_data">
+                </th>
+                <th ms-for="($key,$val) in @listArray[0] | limitBy(5)">{{$key}}</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--ms-for:($index,el) in @listArray-->
+            <tr>
+                <td>
+                    <input type="checkbox" name="" ms-duplex-checked="el.checked" data-duplex-changed="f_checkOne">
+                </td>
+                <td ms-for="(k,v) in el | limitBy(5)">{{v}}</td>
+                <td><button type="button" class="u-btn u-btn-c3" ms-click="f_edit_checked($index)">编辑</button></td>
+            </tr>
+            <!--ms-for-end: -->
+        </tbody>
+    </table>
+</div>

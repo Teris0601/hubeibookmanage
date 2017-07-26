@@ -1,0 +1,65 @@
+<div :controller="mc_user_set">
+    <div class="m-form">
+        <form name="" action="#" method="get">
+            <fieldset>
+                <div class="formitm">
+                    <label class="lab">用户名：</label>
+                    <div class="ipt">
+                        <span class="domain" ms-text="@va_username"></span>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">密码：</label>
+                    <div class="ipt">
+                        <button type="button" class="u-btn u-btn-c2" ms-click="f_changePassword">修改密码</button>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">单位名称：</label>
+                    <div class="ipt">
+                        <input type="text" class="u-ipt" />
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">上级单位：</label>
+                    <div class="ipt">
+                        <span class="domain" ms-text="@va_superior"></span>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">所属区域：</label>
+                    <div class="ipt">
+                        <span class="domain">湖北省</span>
+                        <select class="ml10" name="city" ms-duplex="@citySelect">
+                            <option ms-for="el in @cityArray" ms-attr="{value:el.name}">{{el.name}}</option>
+                        </select>
+                        <select class="ml10" name="area" id="" ms-duplex="@areaSelect">
+                            <option ms-for="el in @areaArray" ms-attr="{value:el.name}">{{el.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">具体地址：</label>
+                    <div class="ipt">
+                        <input type="text" class="u-ipt" />
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">联系人：</label>
+                    <div class="ipt">
+                        <input type="text" class="u-ipt" />
+                    </div>
+                </div>
+                <div class="formitm">
+                    <label class="lab">联系电话：</label>
+                    <div class="ipt">
+                        <input type="text" class="u-ipt" />
+                    </div>
+                </div>
+                <div class="formitm formitm-1">
+                    <button class="u-btn u-btn-c3" type="button">保存</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,420 @@
+/* 全屏自适应布局  */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+html {
+    _height: auto;
+    _padding: 50px 0 0;
+}
+
+.g-hd, .g-sd, .g-mn, .g-ft {
+    position: absolute;
+    left: 0;
+}
+
+.g-hd, .g-ft {
+    width: 100%;
+}
+
+.g-sd, .g-mn {
+    top: 50px;
+    bottom: 0;
+    _height: 100%;
+    overflow: auto;
+}
+
+.g-hd {
+    top: 0;
+    height: 50px;
+    background-color: #e6e6e6;
+    line-height: 50px;
+}
+
+.g-hd .u-btns {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.g-sd {
+    width: 200px;
+    background-color: #eee;
+}
+
+.g-mn {
+    _position: relative;
+    left: 200px;
+    right: 0;
+    _top: 0;
+    _left: 0;
+    _margin-left: 200px;
+}
+
+.g-ft {
+    bottom: 0;
+    height: 50px;
+}
+
+.g-main {
+    padding: 0 10px 20px 20px;
+    margin-top: 51px;
+    _margin-top: 0;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mt10 {
+    margin-right: 10px;
+}
+
+.mb10 {
+    margin-right: 10px;
+}
+
+
+/* 三栏布局  主栏中 两侧栏分居左右*/
+
+.g-mn4 {
+    float: right;
+    width: 100%;
+    margin-left: -200px;
+}
+
+.g-mnc4 {
+    margin-left: 210px;
+}
+
+.g-sd4 {
+    float: left;
+    width: 200px;
+}
+
+.g-mn5 {
+    float: left;
+    width: 100%;
+    margin-right: -200px;
+}
+
+.g-mnc5 {
+    margin-right: 210px;
+}
+
+.g-sd5 {
+    float: right;
+    width: 200px;
+}
+
+
+/* 通用自定义按钮组合 */
+
+.u-btns {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    position: relative;
+    padding-left: 1px;
+}
+
+.u-btns .u-btn {
+    float: left;
+    margin-left: -1px;
+    border-radius: 0;
+}
+
+
+/* 侧边导航 */
+
+.m-menu li {
+    display: inline;
+}
+
+.m-menu li a {
+    background: url(/statics/images/dd253318333050a3257cab0fecd28340.png) no-repeat 20px 18px;
+    padding-left: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #555;
+    display: block;
+    height: 43px;
+    line-height: 43px;
+    border-bottom: 1px dotted #d2d2d2;
+}
+
+.m-menu li a.noline {
+    border-bottom: none;
+}
+
+.m-menu li a:hover {
+    color: #8caf00;
+}
+
+.m-menu li a.selected:hover {
+    color: #fff;
+}
+
+.m-menu li .selected {
+    background-color: #8caf00;
+    background-position: 200px -9px;
+    color: #fff;
+}
+
+.m-menu li {
+    border-bottom: 1px dotted #d2d2d2;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    min-height: 40px;
+    _height: 40px;
+    z-index: 10;
+    zoom: 1
+}
+
+.m-menu li h4 {
+    cursor: pointer;
+    background: url(/statics/images/616aa03c1bd840ed749c9cd14d7cd2bf.png) no-repeat 20px 16px;
+    padding-left: 40px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #555;
+    display: block;
+    line-height: 40px;
+    font-weight: normal;
+}
+
+.m-menu li.noline {
+    border-bottom: none;
+}
+
+.m-menu li h4:hover {
+    color: #8caf00;
+    text-decoration: underline;
+}
+
+.m-menu li.selected h4 {
+    background-position: 20px -39px;
+    border-bottom: 1px dotted #d2d2d2;
+}
+
+.m-menu li a {}
+
+.m-menu li .on a {
+    color: #8caf00;
+    font-weight: bold;
+}
+
+.m-menu li a:hover {
+    color: #8caf00;
+    text-decoration: underline;
+}
+
+.bg-color {
+    background-color: #8caf00;
+}
+
+.m-menu li .list-item {
+    padding: 5px 0;
+    position: relative;
+    zoom: 1
+}
+
+.m-menu li .list-item p {
+    padding-left: 8px;
+}
+
+.m-menu li .list-item a {
+    background: none;
+    border: none;
+    color: #333333;
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    padding-left: 60px;
+    position: relative;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.left-sider .m-menu {
+    border: 1px solid #eaeaea;
+    zoom: 1
+}
+
+.left-sider .ser-online a {
+    margin-top: 10px;
+    height: 75px;
+    border: 1px solid #eaeaea;
+    display: block;
+}
+
+
+/* 多行式面包屑导航 */
+
+.m-crumb {
+    position: fixed;
+    overflow: hidden;
+    margin-bottom: 10px;
+    width: 100%;
+    line-height: 40px;
+    zoom: 1;
+    background-color: #fff;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.m-crumb ul {
+    padding-left: 20px;
+}
+
+.m-crumb li {
+    float: left;
+    word-wrap: normal;
+    white-space: nowrap;
+}
+
+.m-crumb li i {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #ccc;
+    font-family: \5b8b\4f53;
+}
+
+
+/* 简易数据表格-格边框 */
+
+.m-table {
+    table-layout: fixed;
+    width: 100%;
+    line-height: 1.5;
+}
+
+.m-table th, .m-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.m-table th {
+    font-weight: bold;
+}
+
+.m-table tbody tr.even {
+    background: #fafafa;
+}
+
+.m-table tbody tr:hover {
+    background: #f0f0f0;
+}
+
+.m-table .cola {
+    width: 30px;
+}
+
+.m-table .colb {
+    width: 200px;
+}
+
+
+/* 简易数据表格-行边框*/
+
+.m-table-row th, .m-table-row td {
+    border-width: 0 0 1px;
+}
+.p-home .m-crumb{
+    display: none;
+}
+.p-home .g-main{
+    text-align: center;
+    padding-top: 50px;
+}.p-data_entry .m-form{
+    margin-bottom: 20px;
+}
+.p-data_entry .m-table{
+    margin-top: 10px;
+}.p-data_view .m-table{
+    margin-top: 20px;
+}/* 选框与文本对齐   */
+.p-report_view   input[type=radio], .p-report_view  input[type=checkbox] {
+    position: relative;
+    *top: 1px;
+    margin: 0 4px 0 0;
+    *margin: 0 0 0 -4px;
+  }
+
+.p-report_view  .m-form .ipt .u-radio *{
+    *vertical-align: baseline;
+  }
+
+.p-report_view .u-radio{
+    line-height:30px;
+}
+
+.p-report_view .formitm{
+    padding-top: 10px;
+}
+
+.p-report_view .m-table{
+    margin-top: 20px;
+}
+.p-report_view .m-form{ height: auto; }.p-subject_list .m-table {
+    margin-top: 20px;
+}
+.p-subject_list .m-form .formitm{
+    padding-top: 0;
+}
+.p-subject_list .m-form .u-btn{
+    margin-left: 10px;
+}
+.p-subject_list .m-form span.u-btn{
+    margin-left: 0;
+    margin-right: 10px;
+}
+.p-subject_list .m-form .ipt .u-ipt{
+    width: 140px;
+}
+.p-subject_list .m-form .ipt .u-btn{
+    margin-left: 10px;
+}
+/* 两列左侧自适应布局 */
+.p-user_list .g-bd2{
+    margin:0 0 10px;
+}
+.p-user_list .g-sd2{
+    position:relative;
+    float:right;
+    width:230px;
+    margin-left:-230px
+}
+.p-user_list .g-mn2{
+    float:left;
+    width:100%;
+}
+.p-user_list .g-mn2c{
+    margin-right:240px;
+}
+.p-user_list .m-table{
+    margin-top: 20px;
+}
+.p-user_list .m-table .u-btn{
+    margin-left: 10px;
+}
+.p-user_list .ipt .u-btn{
+    margin-left: 10px;
+}
+.p-user_list .formitm{
+    padding-top: 0;
+}.p-user_set .u-btns{
+    margin-left: 20px;
+}
+/*# sourceMappingURL=styles.css.map*/

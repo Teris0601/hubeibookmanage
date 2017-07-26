@@ -1,0 +1,80 @@
+<div :important="mc_report_view">
+  <div class="m-form">
+    <form name="" action="#" method="get">
+      <fieldset>
+        <div class="formitm">
+          <label class="lab">单位：</label>
+          <div class="ipt">
+            <label class="f-ib"><input type="checkbox" ms-duplex-checked="@checkall_city" data-duplex-changed="f_checkAll('cityArray',$event)">全选</label>
+            <label class="f-ib ml10" ms-for="(index,val) in @cityArray"><input type="checkbox" ms-duplex-checked="val.checked" data-duplex-changed="f_checkOne('checkall_city','cityArray',$event,val.name,index)">{{val.name}}</label>
+          </div>
+        </div>
+        <div class="formitm" ms-if="@area_show">
+          <label class="lab">区域：</label>
+          <div class="ipt">
+            <!--ms-for:(index,el) in @areaArray-->
+            <div class="u-radio">
+              <label class="f-ib">{{@areaTitArray[index]}}：</label>
+              <label class="f-ib ml10"><input type="checkbox" ms-duplex-checked="@checkall_area[index]" data-duplex-changed="f_area_checkAll($event,index)">全选</label>
+              <label class="f-ib ml10" ms-for="val in el"><input type="checkbox" ms-duplex-checked="val.checked" data-duplex-changed="f_area_checkOne($event, index)">{{val.name}}</label>
+            </div>
+            <!--ms-for-end:-->
+          </div>
+        </div>
+        <div class="formitm">
+          <label class="lab">年级：</label>
+          <div class="ipt">
+            <div class="u-radio">
+                <label class="f-ib"><input type="checkbox" ms-duplex-checked="@checkall_grade" data-duplex-changed="f_checkAll('gradeArray',$event)">全选</label>
+                <label class="f-ib ml10" ms-for="val in @gradeArray"><input type="checkbox" ms-duplex-checked="val.checked" data-duplex-changed="f_checkOne('checkall_grade','gradeArray',$event)">{{val.name}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="formitm">
+          <label class="lab">科目：</label>
+          <div class="ipt">
+            <div class="u-radio">
+                <label class="f-ib "><input type="checkbox" ms-duplex-checked="@checkall_subject" data-duplex-changed="f_checkAll('subjectArray',$event)">全选</label>
+                <label class="f-ib ml10" ms-for="val in @subjectArray"><input type="checkbox" ms-duplex-checked="val.checked" data-duplex-changed="f_checkOne('checkall_subject','subjectArray',$event)">{{val.name}}</label>
+            </div>
+          </div>
+        </div>
+<!--         <div class="formitm">
+          <label class="lab">版别：</label>
+          <div class="ipt">
+            <div class="u-radio">
+                <label class="f-ib mr10"><input type="checkbox" ms-duplex-checked="@checkall_press" data-duplex-changed="f_checkAll('pressArray',$event)">全选</label>
+                <label class="f-ib mr10" ms-for="val in @pressArray"><input type="checkbox" ms-duplex-checked="val.checked" data-duplex-changed="f_checkOne('checkall_press','pressArray',$event)">{{val.name}}</label>
+            </div>
+          </div>
+        </div> -->
+        <div class="formitm">
+          <label class="lab">其它：</label>
+          <div class="ipt">
+            <div class="u-radio">
+                <label class="f-ib "><input type="checkbox" ms-duplex-checked="@checkall_other" data-duplex-changed="f_checkAll('otherArray',$event)">全选</label>
+                <label class="f-ib ml10" ms-for="val in @otherArray"><input type="checkbox" ms-duplex-checked="val.checked" data-duplex-changed="f_checkOne('checkall_other','otherArray',$event)">{{val.name}}</label>
+            </div>
+          </div>
+        </div>
+        <div class="formitm formitm-1">
+          <button type="button" class="u-btn u-btn-c3">生成报表</button>
+          <button type="button" class="u-btn u-btn-c2 ml10">导出当前报表</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <table class="m-table">
+      <thead>
+          <tr><th>格边框</th><th>表头</th><th>表头</th><th>表头</th><th>表头</th></tr>
+      </thead>
+      <tbody>
+          <tr><td>内容</td><td>内容内容内容内容内容内容内容</td><td>内容内容</td><td>内容内容</td><td>内容内容内容</td></tr>
+          <tr class="even"><td>内容</td><td>内容内容内容内容内容内容内容</td><td>内容内容</td><td>内容内容</td><td>内容内容内容</td></tr>
+          <tr><td>内容</td><td>内容内容内容内容内容内容内容</td><td>内容内容</td><td>内容内容</td><td>内容内容内容</td></tr>
+          <tr class="even"><td>内容</td><td>内容内容内容内容内容内容内容</td><td>内容内容</td><td>内容内容</td><td>内容内容内容</td></tr>
+          <tr><td>内容</td><td>内容内容内容内容内容内容内容</td><td>内容内容</td><td>内容内容</td><td>内容内容内容</td></tr>
+      </tbody>
+  </table>
+</div>

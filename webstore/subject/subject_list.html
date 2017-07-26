@@ -1,0 +1,43 @@
+<div :important='mc_subject_list'>
+  <div class="m-form">
+    <form name="" action="#" method="get">
+      <fieldset>
+        <div class="formitm f-fl">
+          <span class="u-btn u-btn-c3" ms-click="f_addUser('创建科目')">创建科目</span>
+          <span class="u-btn">查看已关闭科目</span>
+          <span class="u-btn u-btn-c2">批量导入科目</span>
+        </div>
+        <div class="formitm f-fl">
+          <label class="lab">书名：</label>
+          <div class="ipt">
+            <input type="text" class="u-ipt" />
+          </div>
+        </div>
+        <div class="formitm f-fl">
+          <label class="lab">征订代码：</label>
+          <div class="ipt">
+            <input type="text" class="u-ipt" />
+          </div>
+        </div>
+        <button type="button" class="u-btn u-btn-c3">查询</button>
+        <button type="button" class="u-btn u-btn-c4">重置</button>
+      </fieldset>
+    </form>
+  </div>
+  <table class="m-table">
+    <thead>
+      <tr>
+        <th ms-for='($key,$val) in @subjectArray[0][0]'>{{$key}}</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody ms-for='($index,el) in @subjectArray'>
+      <!--ms-for:($i,$e) in @subjectArray[$index] as newArray-->
+      <tr>
+        <td ms-for='($k,$v) in @newArray[$i]' ms-attr="{rowspan:($i===0&&$k==='科目')?@newArray.length:false}">{{$v}}</td>
+        <td><span class="u-btn" ms-click="f_addUser('编辑科目')">编辑</span></td>
+      </tr>
+      <!--ms-for-end:-->
+    </tbody>
+  </table>
+</div>
